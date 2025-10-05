@@ -9,24 +9,22 @@ To write a program to implement the SVM For Spam Mail Detection.
 
 ## Algorithm
 
-```
+
 1.Detect file encoding.
 2.Load and Inspect the data.
 3.Preprocessing the data.
 4.Convert text to numerial features.
 5.Train the model.
-6.Make predictions.
-```
-## Program:
+6.Make predictions.
 
+## Program:
 ```
 /*
 Program to implement the SVM For Spam Mail Detection..
 Developed by: Priyadharshini S
 RegisterNumber:  25017590
-*/
-```
-```
+
+
 import chardet
 file='spam.csv'
 with open(file,'rb') as rawdata:
@@ -42,6 +40,7 @@ x=data["v1"].values
 y=data["v2"].values
 from sklearn.model_selection import train_test_split
 x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=0)
+from sklearn.feature_extraction.text import CountVectorizer
 cv=CountVectorizer()
 x_train=cv.fit_transform(x_train)
 x_test=cv.transform(x_test)
@@ -62,3 +61,5 @@ accuracy
 
 ## Result:
 Thus the program to implement the SVM For Spam Mail Detection is written and verified using python programming.
+
+
